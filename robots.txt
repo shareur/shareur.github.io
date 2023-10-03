@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.shareur.cn/sitemap.xml
+Sitemap: https://www.shareur.cn/baidusitemap.xml
