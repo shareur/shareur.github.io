@@ -2,16 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.shareur.cn/2023/10/EvenlyDistributed-1</loc>
-    
-    <lastmod>2023-10-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.shareur.cn/2023/10/EvenlyDistributed</loc>
+    <loc>http://shareur.cn/2023/10/EvenlyDistributed</loc>
     
     <lastmod>2023-10-04</lastmod>
     
@@ -20,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/2023/10/hello-world</loc>
+    <loc>http://shareur.cn/2023/10/hello-world</loc>
     
     <lastmod>2023-10-03</lastmod>
     
@@ -29,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/2022/05/%E5%8F%8C%E4%BA%BA%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B</loc>
+    <loc>http://shareur.cn/2022/05/%E5%8F%8C%E4%BA%BA%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B</loc>
     
     <lastmod>2022-05-29</lastmod>
     
@@ -38,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/2022/05/XSX%E6%B7%BB%E5%8A%A0%E7%94%B5%E8%A7%86%E7%9B%B4%E6%92%AD</loc>
+    <loc>http://shareur.cn/2022/05/XSX%E6%B7%BB%E5%8A%A0%E7%94%B5%E8%A7%86%E7%9B%B4%E6%92%AD</loc>
     
     <lastmod>2022-05-29</lastmod>
     
@@ -47,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/about/</loc>
+    <loc>http://shareur.cn/about/</loc>
     
     <lastmod>2022-05-26</lastmod>
     
@@ -56,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/tags/</loc>
+    <loc>http://shareur.cn/tags/</loc>
     
     <lastmod>2022-05-21</lastmod>
     
@@ -65,7 +56,7 @@
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/2022/05/%E4%BA%94%E9%A2%9C%E5%85%AD%E8%89%B2</loc>
+    <loc>http://shareur.cn/2022/05/%E4%BA%94%E9%A2%9C%E5%85%AD%E8%89%B2</loc>
     
     <lastmod>2022-05-21</lastmod>
     
@@ -74,7 +65,7 @@
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/talking/</loc>
+    <loc>http://shareur.cn/talking/</loc>
     
     <lastmod>2020-09-15</lastmod>
     
@@ -83,7 +74,7 @@
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/Gallery/ohmygirl/</loc>
+    <loc>http://shareur.cn/Gallery/ohmygirl/</loc>
     
     <lastmod>2019-12-25</lastmod>
     
@@ -92,7 +83,7 @@
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/Gallery/marvel/</loc>
+    <loc>http://shareur.cn/Gallery/marvel/</loc>
     
     <lastmod>2019-12-25</lastmod>
     
@@ -101,7 +92,7 @@
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/Gallery/wallpaper/</loc>
+    <loc>http://shareur.cn/Gallery/wallpaper/</loc>
     
     <lastmod>2019-12-25</lastmod>
     
@@ -110,7 +101,7 @@
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/Gallery/</loc>
+    <loc>http://shareur.cn/Gallery/</loc>
     
     <lastmod>2019-10-24</lastmod>
     
@@ -119,7 +110,7 @@
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/messageboard/</loc>
+    <loc>http://shareur.cn/messageboard/</loc>
     
     <lastmod>2019-04-14</lastmod>
     
@@ -128,7 +119,7 @@
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/link/</loc>
+    <loc>http://shareur.cn/categories/</loc>
     
     <lastmod>2018-06-07</lastmod>
     
@@ -137,7 +128,7 @@
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/categories/</loc>
+    <loc>http://shareur.cn/link/</loc>
     
     <lastmod>2018-06-07</lastmod>
     
@@ -147,72 +138,72 @@
   
 
   <url>
-    <loc>http://www.shareur.cn/</loc>
-    <lastmod>2024-03-04</lastmod>
+    <loc>http://shareur.cn/</loc>
+    <lastmod>2024-03-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://www.shareur.cn/tags/Seth-s-Blog/</loc>
-    <lastmod>2024-03-04</lastmod>
+    <loc>http://shareur.cn/tags/Seth-s-Blog/</loc>
+    <lastmod>2024-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/tags/xbox/</loc>
-    <lastmod>2024-03-04</lastmod>
+    <loc>http://shareur.cn/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2024-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/tags/%E6%9C%BA%E9%A1%B6%E7%9B%92/</loc>
-    <lastmod>2024-03-04</lastmod>
+    <loc>http://shareur.cn/tags/xbox/</loc>
+    <lastmod>2024-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/tags/%E6%8A%98%E8%85%BE/</loc>
-    <lastmod>2024-03-04</lastmod>
+    <loc>http://shareur.cn/tags/%E6%9C%BA%E9%A1%B6%E7%9B%92/</loc>
+    <lastmod>2024-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2024-03-04</lastmod>
+    <loc>http://shareur.cn/tags/%E6%8A%98%E8%85%BE/</loc>
+    <lastmod>2024-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/tags/%E4%B9%A6%E9%87%8C%E7%9A%84%E9%A2%9C%E8%89%B2/</loc>
-    <lastmod>2024-03-04</lastmod>
+    <loc>http://shareur.cn/tags/%E4%B9%A6%E9%87%8C%E7%9A%84%E9%A2%9C%E8%89%B2/</loc>
+    <lastmod>2024-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/tags/%E6%96%87%E6%91%98/</loc>
-    <lastmod>2024-03-04</lastmod>
+    <loc>http://shareur.cn/tags/%E6%96%87%E6%91%98/</loc>
+    <lastmod>2024-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/tags/%E5%8F%8C%E4%BA%BA%E6%B8%B8%E6%88%8F/</loc>
-    <lastmod>2024-03-04</lastmod>
+    <loc>http://shareur.cn/tags/%E5%8F%8C%E4%BA%BA%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2024-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/tags/%E8%AF%84%E6%B5%8B/</loc>
-    <lastmod>2024-03-04</lastmod>
+    <loc>http://shareur.cn/tags/%E8%AF%84%E6%B5%8B/</loc>
+    <lastmod>2024-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -220,15 +211,15 @@
 
   
   <url>
-    <loc>http://www.shareur.cn/categories/xbox/</loc>
-    <lastmod>2024-03-04</lastmod>
+    <loc>http://shareur.cn/categories/xbox/</loc>
+    <lastmod>2024-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.shareur.cn/categories/%E8%AF%BB%E4%B9%A6/</loc>
-    <lastmod>2024-03-04</lastmod>
+    <loc>http://shareur.cn/categories/%E8%AF%BB%E4%B9%A6/</loc>
+    <lastmod>2024-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

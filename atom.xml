@@ -3,11 +3,11 @@
   <title>shareur</title>
   
   <subtitle>做个开心有趣的人</subtitle>
-  <link href="http://www.shareur.cn/atom.xml" rel="self"/>
+  <link href="http://shareur.cn/atom.xml" rel="self"/>
   
-  <link href="http://www.shareur.cn/"/>
-  <updated>2023-10-05T13:47:57.000Z</updated>
-  <id>http://www.shareur.cn/</id>
+  <link href="http://shareur.cn/"/>
+  <updated>2023-10-04T18:35:34.000Z</updated>
+  <id>http://shareur.cn/</id>
   
   <author>
     <name>牧羊</name>
@@ -17,24 +17,9 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>EvenlyDistributed</title>
-    <link href="http://www.shareur.cn/2023/10/EvenlyDistributed-1"/>
-    <id>http://www.shareur.cn/2023/10/EvenlyDistributed-1</id>
-    <published>2023-10-05T13:47:57.000Z</published>
-    <updated>2023-10-05T13:47:57.000Z</updated>
-    
-    
-    
-    
-    
-    <category term="Seth&#39;s Blog" scheme="http://www.shareur.cn/tags/Seth-s-Blog/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Evenly Distributed</title>
-    <link href="http://www.shareur.cn/2023/10/EvenlyDistributed"/>
-    <id>http://www.shareur.cn/2023/10/EvenlyDistributed</id>
+    <link href="http://shareur.cn/2023/10/EvenlyDistributed"/>
+    <id>http://shareur.cn/2023/10/EvenlyDistributed</id>
     <published>2023-10-04T18:35:34.000Z</published>
     <updated>2023-10-04T18:35:34.000Z</updated>
     
@@ -49,16 +34,16 @@
     
     
     
-    <category term="Seth&#39;s Blog" scheme="http://www.shareur.cn/tags/Seth-s-Blog/"/>
+    <category term="Seth&#39;s Blog" scheme="http://shareur.cn/tags/Seth-s-Blog/"/>
     
-    <category term="英语学习" scheme="http://www.shareur.cn/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
+    <category term="英语学习" scheme="http://shareur.cn/tags/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://www.shareur.cn/2023/10/hello-world"/>
-    <id>http://www.shareur.cn/2023/10/hello-world</id>
+    <link href="http://shareur.cn/2023/10/hello-world"/>
+    <id>http://shareur.cn/2023/10/hello-world</id>
     <published>2023-10-03T17:03:48.588Z</published>
     <updated>2023-10-03T17:03:48.588Z</updated>
     
@@ -77,8 +62,8 @@
   
   <entry>
     <title>双人游戏评测</title>
-    <link href="http://www.shareur.cn/2022/05/%E5%8F%8C%E4%BA%BA%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B"/>
-    <id>http://www.shareur.cn/2022/05/%E5%8F%8C%E4%BA%BA%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B</id>
+    <link href="http://shareur.cn/2022/05/%E5%8F%8C%E4%BA%BA%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B"/>
+    <id>http://shareur.cn/2022/05/%E5%8F%8C%E4%BA%BA%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B</id>
     <published>2022-05-29T14:56:58.000Z</published>
     <updated>2022-05-29T14:56:58.000Z</updated>
     
@@ -94,19 +79,19 @@
     
     
     
-    <category term="xbox" scheme="http://www.shareur.cn/categories/xbox/"/>
+    <category term="xbox" scheme="http://shareur.cn/categories/xbox/"/>
     
     
-    <category term="双人游戏" scheme="http://www.shareur.cn/tags/%E5%8F%8C%E4%BA%BA%E6%B8%B8%E6%88%8F/"/>
+    <category term="双人游戏" scheme="http://shareur.cn/tags/%E5%8F%8C%E4%BA%BA%E6%B8%B8%E6%88%8F/"/>
     
-    <category term="评测" scheme="http://www.shareur.cn/tags/%E8%AF%84%E6%B5%8B/"/>
+    <category term="评测" scheme="http://shareur.cn/tags/%E8%AF%84%E6%B5%8B/"/>
     
   </entry>
   
   <entry>
     <title>XSX添加电视直播</title>
-    <link href="http://www.shareur.cn/2022/05/XSX%E6%B7%BB%E5%8A%A0%E7%94%B5%E8%A7%86%E7%9B%B4%E6%92%AD"/>
-    <id>http://www.shareur.cn/2022/05/XSX%E6%B7%BB%E5%8A%A0%E7%94%B5%E8%A7%86%E7%9B%B4%E6%92%AD</id>
+    <link href="http://shareur.cn/2022/05/XSX%E6%B7%BB%E5%8A%A0%E7%94%B5%E8%A7%86%E7%9B%B4%E6%92%AD"/>
+    <id>http://shareur.cn/2022/05/XSX%E6%B7%BB%E5%8A%A0%E7%94%B5%E8%A7%86%E7%9B%B4%E6%92%AD</id>
     <published>2022-05-29T12:48:12.000Z</published>
     <updated>2022-05-29T12:48:12.000Z</updated>
     
@@ -120,21 +105,21 @@
     
     
     
-    <category term="xbox" scheme="http://www.shareur.cn/categories/xbox/"/>
+    <category term="xbox" scheme="http://shareur.cn/categories/xbox/"/>
     
     
-    <category term="xbox" scheme="http://www.shareur.cn/tags/xbox/"/>
+    <category term="xbox" scheme="http://shareur.cn/tags/xbox/"/>
     
-    <category term="机顶盒" scheme="http://www.shareur.cn/tags/%E6%9C%BA%E9%A1%B6%E7%9B%92/"/>
+    <category term="机顶盒" scheme="http://shareur.cn/tags/%E6%9C%BA%E9%A1%B6%E7%9B%92/"/>
     
-    <category term="折腾" scheme="http://www.shareur.cn/tags/%E6%8A%98%E8%85%BE/"/>
+    <category term="折腾" scheme="http://shareur.cn/tags/%E6%8A%98%E8%85%BE/"/>
     
   </entry>
   
   <entry>
     <title>五颜六色</title>
-    <link href="http://www.shareur.cn/2022/05/%E4%BA%94%E9%A2%9C%E5%85%AD%E8%89%B2"/>
-    <id>http://www.shareur.cn/2022/05/%E4%BA%94%E9%A2%9C%E5%85%AD%E8%89%B2</id>
+    <link href="http://shareur.cn/2022/05/%E4%BA%94%E9%A2%9C%E5%85%AD%E8%89%B2"/>
+    <id>http://shareur.cn/2022/05/%E4%BA%94%E9%A2%9C%E5%85%AD%E8%89%B2</id>
     <published>2022-05-21T12:42:30.000Z</published>
     <updated>2022-05-21T12:42:30.000Z</updated>
     
@@ -149,12 +134,12 @@
     
     
     
-    <category term="读书" scheme="http://www.shareur.cn/categories/%E8%AF%BB%E4%B9%A6/"/>
+    <category term="读书" scheme="http://shareur.cn/categories/%E8%AF%BB%E4%B9%A6/"/>
     
     
-    <category term="书里的颜色" scheme="http://www.shareur.cn/tags/%E4%B9%A6%E9%87%8C%E7%9A%84%E9%A2%9C%E8%89%B2/"/>
+    <category term="书里的颜色" scheme="http://shareur.cn/tags/%E4%B9%A6%E9%87%8C%E7%9A%84%E9%A2%9C%E8%89%B2/"/>
     
-    <category term="文摘" scheme="http://www.shareur.cn/tags/%E6%96%87%E6%91%98/"/>
+    <category term="文摘" scheme="http://shareur.cn/tags/%E6%96%87%E6%91%98/"/>
     
   </entry>
   
