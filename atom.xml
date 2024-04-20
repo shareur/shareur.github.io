@@ -6,7 +6,7 @@
   <link href="http://shareur.cn/atom.xml" rel="self"/>
   
   <link href="http://shareur.cn/"/>
-  <updated>2023-10-04T18:35:34.000Z</updated>
+  <updated>2024-04-20T08:47:43.000Z</updated>
   <id>http://shareur.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HowToCreateAGoogleBlogger</title>
+    <link href="http://shareur.cn/2024/04/HowToCreateAGoogleBlogger"/>
+    <id>http://shareur.cn/2024/04/HowToCreateAGoogleBlogger</id>
+    <published>2024-04-20T08:47:43.000Z</published>
+    <updated>2024-04-20T08:47:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>This is a test.<br>Will write the content latter</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;This is a test.&lt;br&gt;Will write the content latter&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Evenly Distributed</title>
