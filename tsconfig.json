@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "bundler",
+    "target": "ES2021",
+    "module": "ESNext",
+    "jsx": "preserve",
+    "strict": true,
+    "types": ["astro/client"]
+  }
+}
