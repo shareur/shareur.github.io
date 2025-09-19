@@ -6,29 +6,59 @@ on:
   workflow_dispatch: {}
 
 permissions:
-  contents: write
+  contents: write   # 用 peaceiris/actions-gh-pages 推 gh-pages 分支需要这个
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout (astro branch)
         uses: actions/checkout@v4
         with:
           ref: astro
 
+      - name: Detect package manager
+        id: pm
+        run: |
+          if [ -f pnpm-lock.yaml ]; then
+            echo "mgr=pnpm" >> $GITHUB_OUTPUT
+          elif [ -f yarn.lock ]; then
+            echo "mgr=yarn" >> $GITHUB_OUTPUT
+          else
+            echo "mgr=npm" >> $GITHUB_OUTPUT
+          fi
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: ${{ steps.pm.outputs.mgr }}
+
+      - name: Setup pnpm
+        if: steps.pm.outputs.mgr == 'pnpm'
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
 
       - name: Install deps
-        run: npm ci || npm i
+        run: |
+          if [ "${{ steps.pm.outputs.mgr }}" = "pnpm" ]; then pnpm i --frozen-lockfile || pnpm i; fi
+          if [ "${{ steps.pm.outputs.mgr }}" = "yarn" ]; then yarn install --frozen-lockfile || yarn install; fi
+          if [ "${{ steps.pm.outputs.mgr }}" = "npm" ]; then npm ci || npm i; fi
 
-      - name: Build
-        run: npm run build
+      - name: Build (pass site/base via env if未在astro.config中写死)
+        env:
+          ASTRO_SITE: https://imyang.world
+          ASTRO_BASE: /astro/
+        run: |
+          # 如果你的 package.json 里没有 "build": "astro build"，先加上
+          npx --yes astro --version
+          # 优先使用项目里的脚本
+          if [ "${{ steps.pm.outputs.mgr }}" = "pnpm" ]; then pnpm run build || pnpm astro build; fi
+          if [ "${{ steps.pm.outputs.mgr }}" = "yarn" ]; then yarn build || yarn astro build; fi
+          if [ "${{ steps.pm.outputs.mgr }}" = "npm" ]; then npm run build || npx --yes astro build; fi
 
-      # 把 dist 发布到 gh-pages 的 /astro 子目录，保留其他文件
       - name: Deploy to gh-pages/astro
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -39,14 +69,12 @@ jobs:
           keep_files: true
           cname: imyang.world
 
-      # （可选）首次自动写入根 index.html（默认跳到 /astro/）
-      - name: Ensure root index.html
+      - name: Ensure root index.html (redirect to /astro/)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch origin gh-pages:gh-pages
           git checkout gh-pages
-          mkdir -p .
           if [ ! -f index.html ]; then
             cat > index.html <<'HTML'
 <!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/astro/"><title>imyang.world</title>
