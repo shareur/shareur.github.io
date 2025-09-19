@@ -56,7 +56,7 @@ const config = {
     },
     {
       title: "Join My YouTube Channel",
-      url: "www.youtube.com/@shareur",
+      url: "https://www.youtube.com/@shareur",
       icon: "play",
     },
     // Add more links as needed
