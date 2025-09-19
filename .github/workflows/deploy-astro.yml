@@ -3,15 +3,14 @@ name: Deploy Astro to gh-pages/astro
 on:
   push:
     branches: [ "astro" ]
-  workflow_dispatch: {}
+  workflow_dispatch:
 
 permissions:
-  contents: write   # 用 peaceiris/actions-gh-pages 推 gh-pages 分支需要这个
+  contents: write
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout (astro branch)
         uses: actions/checkout@v4
@@ -20,13 +19,14 @@ jobs:
 
       - name: Detect package manager
         id: pm
+        shell: bash
         run: |
-          if [ -f pnpm-lock.yaml ]; then
-            echo "mgr=pnpm" >> $GITHUB_OUTPUT
-          elif [ -f yarn.lock ]; then
-            echo "mgr=yarn" >> $GITHUB_OUTPUT
+          if [[ -f pnpm-lock.yaml ]]; then
+            echo "mgr=pnpm" >> "$GITHUB_OUTPUT"
+          elif [[ -f yarn.lock ]]; then
+            echo "mgr=yarn" >> "$GITHUB_OUTPUT"
           else
-            echo "mgr=npm" >> $GITHUB_OUTPUT
+            echo "mgr=npm" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Setup Node
@@ -36,25 +36,22 @@ jobs:
           cache: ${{ steps.pm.outputs.mgr }}
 
       - name: Setup pnpm
-        if: steps.pm.outputs.mgr == 'pnpm'
+        if: ${{ steps.pm.outputs.mgr == 'pnpm' }}
         uses: pnpm/action-setup@v4
         with:
           version: 9
 
-      - name: Install deps
+      - name: Install dependencies
         run: |
-          if [ "${{ steps.pm.outputs.mgr }}" = "pnpm" ]; then pnpm i --frozen-lockfile || pnpm i; fi
+          if [ "${{ steps.pm.outputs.mgr }}" = "pnpm" ]; then pnpm install --frozen-lockfile || pnpm install; fi
           if [ "${{ steps.pm.outputs.mgr }}" = "yarn" ]; then yarn install --frozen-lockfile || yarn install; fi
           if [ "${{ steps.pm.outputs.mgr }}" = "npm" ]; then npm ci || npm i; fi
 
-      - name: Build (pass site/base via env if未在astro.config中写死)
+      - name: Build
         env:
           ASTRO_SITE: https://imyang.world
           ASTRO_BASE: /astro/
         run: |
-          # 如果你的 package.json 里没有 "build": "astro build"，先加上
-          npx --yes astro --version
-          # 优先使用项目里的脚本
           if [ "${{ steps.pm.outputs.mgr }}" = "pnpm" ]; then pnpm run build || pnpm astro build; fi
           if [ "${{ steps.pm.outputs.mgr }}" = "yarn" ]; then yarn build || yarn astro build; fi
           if [ "${{ steps.pm.outputs.mgr }}" = "npm" ]; then npm run build || npx --yes astro build; fi
@@ -68,18 +65,3 @@ jobs:
           destination_dir: astro
           keep_files: true
           cname: imyang.world
-
-      - name: Ensure root index.html (redirect to /astro/)
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git fetch origin gh-pages:gh-pages
-          git checkout gh-pages
-          if [ ! -f index.html ]; then
-            cat > index.html <<'HTML'
-<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/astro/"><title>imyang.world</title>
-HTML
-            git add index.html
-            git commit -m "chore: add root redirect to /astro/" || true
-            git push origin gh-pages
-          fi
