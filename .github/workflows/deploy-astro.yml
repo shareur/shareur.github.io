@@ -1,0 +1,57 @@
+name: Deploy Astro to gh-pages/astro
+
+on:
+  push:
+    branches: [ "astro" ]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (astro branch)
+        uses: actions/checkout@v4
+        with:
+          ref: astro
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install deps
+        run: npm ci || npm i
+
+      - name: Build
+        run: npm run build
+
+      # 把 dist 发布到 gh-pages 的 /astro 子目录，保留其他文件
+      - name: Deploy to gh-pages/astro
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: dist
+          destination_dir: astro
+          keep_files: true
+          cname: imyang.world
+
+      # （可选）首次自动写入根 index.html（默认跳到 /astro/）
+      - name: Ensure root index.html
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages:gh-pages
+          git checkout gh-pages
+          mkdir -p .
+          if [ ! -f index.html ]; then
+            cat > index.html <<'HTML'
+<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=/astro/"><title>imyang.world</title>
+HTML
+            git add index.html
+            git commit -m "chore: add root redirect to /astro/" || true
+            git push origin gh-pages
+          fi
