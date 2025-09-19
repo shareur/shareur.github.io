@@ -12,8 +12,8 @@ npm run dev
 - 推送后自动构建，几分钟内可访问。
 
 ## 自定义域名
-- 在 **Settings → Pages** 里填入 `imyang.world`，保存后仓库会生成 `CNAME` 文件。
-- 在 Cloudflare 添加 CNAME：`imyang.world` → `<你的用户名>.github.io`，开启 HTTPS。
+- 在 **Settings → Pages** 里填入 `example.com`，保存后仓库会生成 `CNAME` 文件。
+- 在 Cloudflare 添加 CNAME：`example.com` → `<你的用户名>.github.io`，开启 HTTPS。
 
 ## 维护书签
 - 编辑 `public/links.json`：
