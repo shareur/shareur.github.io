@@ -1,13 +1,13 @@
 // @ts-check
-import profileImage from './src/images/profilepic.png?url';
+import profileImage from './src/images/avatartion.png?url';
 import backgroundImage from './src/images/backgrounds/watercolor-blue-green.png?url';
 import productImage from './src/images/product1.png?url';
 
 /** @type {import('./src/types').SiteConfig} */
 const config = {
   user: {
-    name: "Cory Trimm",
-    bio: "Serial builder of things - software, hardware, and everything in between. This is my little link in bio project built with Astro and Tailwind.",
+    name: "Yang",
+    bio: "I'm Yang. This is Yang's world.",
     profileImage: profileImage,
   },
   background: {
@@ -17,17 +17,17 @@ const config = {
   socialLinks: [
     {
       platform: "instagram",
-      url: "https://instagram.com/journey.unknown",
+      url: "https://instagram.com/imyang2025",
       icon: "camera-retro",
     },
     {
       platform: "threads",
-      url: "https://threads.net/@journey.unknown",
+      url: "https://threads.net",
       icon: "threads",
     },
     {
       platform: "linkedin",
-      url: "https://linkedin.com/in/cory-trimm",
+      url: "https://linkedin.com",
       icon: "linkedin",
     },
     {
@@ -50,18 +50,13 @@ const config = {
   ],
   links: [
     {
-      title: "Use This Template",
-      url: "https://github.com/ctrimm/astro-link-in-bio-theme",
-      icon: "code",
-    },
-    {
       title: "My Personal Web Site",
-      url: "https://corytrimm.com",
+      url: "https://imyang.me",
       icon: "globe",
     },
     {
       title: "Join My YouTube Channel",
-      url: "https://youtube.com/c/corytrimm",
+      url: "www.youtube.com/@shareur",
       icon: "play",
     },
     // Add more links as needed
