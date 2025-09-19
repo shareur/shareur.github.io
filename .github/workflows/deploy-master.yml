@@ -1,0 +1,68 @@
+name: Deploy MASTER (Astro) to gh-pages/master
+
+on:
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (master)
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Detect package manager
+        id: pm
+        shell: bash
+        run: |
+          if [[ -f pnpm-lock.yaml ]]; then
+            echo "mgr=pnpm" >> "$GITHUB_OUTPUT"
+          elif [[ -f yarn.lock ]]; then
+            echo "mgr=yarn" >> "$GITHUB_OUTPUT"
+          else
+            echo "mgr=npm" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: ${{ steps.pm.outputs.mgr }}
+
+      - name: Setup pnpm
+        if: ${{ steps.pm.outputs.mgr == 'pnpm' }}
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Install deps
+        run: |
+          if [ "${{ steps.pm.outputs.mgr }}" = "pnpm" ]; then pnpm install --frozen-lockfile || pnpm install; fi
+          if [ "${{ steps.pm.outputs.mgr }}" = "yarn" ]; then yarn install --frozen-lockfile || yarn install; fi
+          if [ "${{ steps.pm.outputs.mgr }}" = "npm" ]; then npm ci || npm i; fi
+
+      - name: Build (BASE=/master/)
+        # 若 astro.config.mjs 已写死 base/site，这里无需 env
+        env:
+          ASTRO_SITE: https://imyang.world
+          ASTRO_BASE: /master/
+        run: |
+          if [ "${{ steps.pm.outputs.mgr }}" = "pnpm" ]; then pnpm run build || pnpm astro build; fi
+          if [ "${{ steps.pm.outputs.mgr }}" = "yarn" ]; then yarn build || yarn astro build; fi
+          if [ "${{ steps.pm.outputs.mgr }}" = "npm" ]; then npm run build || npx --yes astro build; fi
+
+      - name: Deploy to gh-pages/master
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: dist
+          destination_dir: master
+          keep_files: true
+          cname: imyang.world
