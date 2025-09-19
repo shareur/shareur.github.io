@@ -1,0 +1,29 @@
+name: Deploy LittleLink to gh-pages/littlelink
+
+on:
+  push:
+    branches: [ "littlelink" ]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout (littlelink branch)
+      uses: actions/checkout@v4
+      with:
+        ref: littlelink
+
+    # LittleLink 是纯静态，无需构建；假设你的入口文件在分支根目录
+    - name: Deploy to gh-pages/littlelink
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: .
+        destination_dir: littlelink
+        keep_files: true
+        cname: imyang.world
