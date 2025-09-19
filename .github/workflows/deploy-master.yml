@@ -45,8 +45,8 @@ jobs:
         run: |
           if [ "${{ steps.pm.outputs.mgr }}" = "pnpm" ]; then pnpm install --frozen-lockfile || pnpm install; fi
           if [ "${{ steps.pm.outputs.mgr }}" = "yarn" ]; then yarn install --frozen-lockfile || yarn install; fi
-          # if [ "${{ steps.pm.outputs.mgr }}" = "npm" ]; then npm ci || npm i; fi
-          if [ "${{ steps.pm.outputs.mgr }}" = "npm" ]; then npm i; fi
+          if [ "${{ steps.pm.outputs.mgr }}" = "npm" ]; then npm ci || npm i; fi
+          # if [ "${{ steps.pm.outputs.mgr }}" = "npm" ]; then npm i; fi
 
       - name: Build (BASE=/master/)
         # 若 astro.config.mjs 已写死 base/site，这里无需 env
